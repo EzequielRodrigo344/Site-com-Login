@@ -1,0 +1,6 @@
+CREATE DATABASE pw2
+USE pw2
+CREATE TABLE users (ID int primary key auto_increment, 
+nome varchar(30), 
+email varchar(30),
+senha varchar(15)):
