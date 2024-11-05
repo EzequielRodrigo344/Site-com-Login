@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="CSS/cadastro.css" media="screen" />
+
+</body>
+</html>
+
+    </script>
+
+</head>
+
+<body>
+    <div class="register-container">
+        <h1>Cadastro</h1>
+        <div class="mae">
+        <form action="cadastro.php" method="post">
+            <input type="text" name="name" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Senha (6 Caracteres)" minlength="6" onchange="checkPasswords();" required>
+            <input type="password" name="password2" placeholder="Confirmar Senha" minlength="6" onchange="checkPasswords();" required>
+            <button type="submit" class="btn-secondary">Cadastrar</button>
+        </form>
+        </div>
+    </div>
+    <script>
+  
+        const password = document.querySelector('input[name=password]');
+        const confirmPassword = document.querySelector('input[name=password2]');
+
+        function checkPasswords() {
+            if (password.value === confirmPassword.value) {
+                confirmPassword.setCustomValidity('');
+            } else {
+               confirmPassword.setCustomValidity('As senhas não coincidem');
+            }
+        }
+
+    
+    </script>
+</body>
+</html>
