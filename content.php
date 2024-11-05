@@ -10,9 +10,8 @@
         <?php
         session_start();
 
-        // if (!isset($_SESSION['name'])) {
-        //     include 'logout.php';
-        // }
+        if (!isset($_SESSION['name'])) {
+            include 'logout.php';}
 
         echo"Seja bem-vindo, " . $_SESSION['name'];
         
