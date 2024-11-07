@@ -3,7 +3,7 @@
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$pdo = new PDO('mysql:host=localhost;dbname=pw2', 'root', 'quiel230202');
+$pdo = new PDO('mysql:host=localhost;dbname=pw2', 'root', 'root');
 
 $stmt = $pdo->prepare("SELECT nome, email, senha FROM users WHERE email = :email ");
 $stmt->bindParam(':email', $email);
